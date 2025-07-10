@@ -15,7 +15,11 @@ closeBtn.addEventListener("click", () => {
 });
 
 popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
-  popup.style.display = "none";
-    }
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
+});
+
+poto.addEventListener("click", () => {
+  alert("Jangan Sentuh ayangku!!");
 });
