@@ -20,7 +20,7 @@ body {
   background: rgba(139, 125, 125, 0.5);
   padding: 40px 30px;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(255, 0, 157, 0.486);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.486);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   text-align: center;
@@ -30,7 +30,7 @@ body {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: blueviolet;
+  color: rgb(247, 0, 255);
 }
 
 p {
@@ -83,37 +83,50 @@ p {
   }
 }
 
-.popup { 
- top: 0px;
- left: 0px;
- z-index: 1000;
- position: fixed;
- background-color: rgba(0, 0, 0, 0.233);
- width: 100%;
- height: 100%;
- backdrop-filter: blur(7px);
- justify-content: center;
- align-items: center;
- display: none;
+.popup {
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.233);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(7px);
+  justify-content: center;
+  align-items: center;
+  display: none;
 }
 
 .close {
   position: absolute;
   font-size: 60px;
   top: 20px;
-right: 70px;
-color: red;
-cursor: pointer;
-z-index: 1001;
+  right: 70px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .close:hover {
   transform: scale(1.2);
+  color: red;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .popup-img {
   max-width: 90%;
   max-height: 90%;
   border-radius: 15px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 10px rgba(214, 214, 214, 0.822);
+  animation: fade 0.4s ease;
 }
